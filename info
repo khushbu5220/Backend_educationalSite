@@ -1,0 +1,51 @@
+
+mongodb+srv://DevSisodiya:devsisodiya33@@cluster0.hzz5s.mongodb.net/Registration?retryWrites=true&w=majority
+
+
+
+
+******************Backend-Api******************
+############# DONE #############   1) Video Api: multiple updating videos   ############# DONE ############# 
+2) Task Api: will discuss later
+3) Socket.io
+4) Payment Gateway
+5) Connecting user and mentor
+6) Follow Video Implementation: how we get followed mentor's videos in priority and notification
+############# DONE #############     7) User Profile: copy paste from mentor    ############# DONE #############
+############# DONE #############     8) Backend of study material: two fields form- topic and link  ############# DONE ############# 
+9) Answer validate in test mentor: How to validate response of mentor to the correct answer
+10) Random questions in test mentor: suffling of mentor test questions
+11) forget password: through nodemailer
+12) update profile info
+13) feedback  //////////EXTRA//////////
+############# DONE #############    14) parents signup   ############# DONE #############
+############# DONE #############    15) parents login    ############# DONE #############
+16) user get data for parents
+
+******************Application******************
+1) Profile image user/mentor
+2) profile section update
+3) Follow/following
+4) Chatting
+5) background image
+6) study-material
+7) Connecting user and mentor
+8) Payment Gateway //////////EXTRA//////////
+9) task   
+10) test mentor paper
+11) parents Application
+12) video uploading and fetching
+
+******************Front-end******************
+1) Profile image of user
+2) profile section update
+3) Follow/following
+4) Chatting
+5) background image
+6) study-material
+7) Connecting user and mentor
+8) Payment Gateway
+9) task   
+10) test mentor paper
+11) video uploading and fetching
+

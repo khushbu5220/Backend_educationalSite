@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+  </head>
+
+  <body>
+    
+    <h1>Registration</h1>
+
+    <form id="reg-form">
+      <td>Full Name:</td>
+      <input type="text" autocomplete="off" id="username" value="" placeholder="Full Name">
+
+      <td>Email:</td>
+      <input type="text" id="email" value="" placeholder="Email">
+
+      <td>Phone No.:</td>
+      <input type="number" id="phone" value="" placeholder="Phone no.">
+
+      <td>Address:</td>
+      <input type="text" id="address" value="" placeholder="Address">
+
+
+      <td>Create Password:</td>
+      <input type="password" autocomplete="off" id="password" placeholder="Create Password" />
+
+      <td>Exam:</td>
+      <!-- <input type="text" autocomplete="off" id="exam" placeholder="Select Exam" /> -->
+      <select name="Exam" id="exam">
+        <option value="jee">jee</option>
+        <option value="neet">neet</option>
+        </select>
+
+        <td>Subject:</td>
+        <select name="Subject" id="subject">
+            <option value="Physics">Physics</option>
+            <option value="Chemistry">Chemistry</option>
+            <option value="Maths">Maths</option>
+            <option value="Biology">Biology</option>
+            </select>
+
+      <input type="submit" id="submitBtn" value = "Submit" />
+    </form>
+
+
+
+    <script>
+      // Register form 
+      const form = document.getElementById('reg-form')
+      form.addEventListener('submit', registerUser)
+
+      async function registerUser(event) {
+        event.preventDefault()
+        const username = document.getElementById('username').value
+        const email = document.getElementById('email').value
+        const phone = document.getElementById('phone').value
+        const address = document.getElementById('address').value
+        const password = document.getElementById('password').value
+        const exam = document.getElementById('exam').value
+        const subject = document.getElementById('subject').value
+
+        
+
+		// Fetching data from body 
+        const result = await fetch('/mentor/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            username,
+            email,
+            phone,
+            address,
+            password,
+            exam,
+            subject
+          })
+        }).then((res) => res.json())
+
+        if (result.status === 'ok') {
+          // everythign went fine
+          alert('Successfully registered')
+        } else {
+          alert(result.error)
+        }
+      }
+
+    </script>
+  </body>
+</html>
